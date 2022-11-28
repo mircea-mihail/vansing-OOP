@@ -1,0 +1,3 @@
+/home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/cmake-build-debug/CMakeFiles/vansing_oop.dir
+/home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/cmake-build-debug/CMakeFiles/rebuild_cache.dir
