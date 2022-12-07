@@ -1,6 +1,6 @@
-//  separarea codului în fișiere .cpp și .h
-//  moșteniri
-//          funcții virtuale (pure) apelate prin pointeri de clasa bază
+//**  separarea codului în fișiere .cpp și .h
+//**  moșteniri
+//**          funcții virtuale (pure) apelate prin pointeri de clasa bază
 //          apelarea constructorului din clasa de bază (trebuie să fie parametrizat)
 //          suprascris cc/op=
 //  dynamic_cast
@@ -18,117 +18,59 @@
 
 #include <iostream>
 #include <string>
-#include <utility>
+#include <vector>
+#include <memory>
+#include "vans.h"
+#include "shoes.h"
+#include "clothes.h"
+
 using namespace std;
 
-class vans{
+class menu{
 private:
-    int size;
-    string product_type;
-
-public:
-    vans(int size_, string product_type_);
-
-    int getSize() const;
-    string getProduct_type() const;
-
-    void setSize(int newSize);
-    void setProduct_type(const string& newType);
-
-    virtual void pall(){
-        cout << "size " << size << "\nproduct_type " <<product_type << "\n\n";
+    static void print_options(){
+        cout << "1-add shoe      11-shoe data\n";
+        cout << "2-add clothing  \n";
+        cout << "5-stop\n\n";
     }
-
-    ~vans();
-};
-
-class shoes : public vans{
-private:
-    string model;
-    string print;
-
 public:
-    shoes(int size_, string product_type_, string model_, string print_);
+    static void start(){
+        static vector <shared_ptr<vans>> v;
+        bool go_loop = true;
+        string auxString; bool auxBool; int auxInt; float auxFloat;
+        shoes auxshoe;
 
-    string getPrint()const;
-    string getModel()const;
-
-    void setPrint(const string &newPrint);
-    void setModel(const string &newModel);
-
-    void pall() override;
-
-    ~shoes();
+        while(go_loop){
+            print_options();
+            int case_val;
+            cin >> case_val;
+            switch(case_val){
+                case(1):
+                    cout << "model: "; cin >> auxString;
+                    cout << "laces? "; cin >> auxBool;
+                    cout << "size:  "; cin >> auxInt;
+                    cout << "price: "; cin >> auxFloat;
+                    auxshoe = new (shoes)(auxInt, auxFloat, auxString, auxBool);
+                    v.emplace_back(shared_ptr<vans>(&auxshoe));
+                    break;
+                case(11):
+                    cout << "what shoe to display data for?\n";
+                    cin >> auxInt;
+                    cout << "size " << (*(v.begin() + auxInt))->getSize() << ", price " << (*(v.begin() + auxInt))->getPrice();
+                case(5):
+                    go_loop = false;
+                    break;
+                default:
+                    cout << "invalid input\n";
+            }
+        }
+    }
 };
-
-class clothes:vans{
-
-};
-
-///vans
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-vans::vans(int size_, string product_type_){
-    size = size_;
-    product_type = std::move(product_type_);
-    cout << "constructed vans:\nsize " << size << "\nproduct_type " <<product_type << "\n\n";
-}
-
-int vans::getSize() const{
-    return size;
-}
-string vans::getProduct_type() const{
-    return product_type;
-}
-
-void vans::setSize(const int newSize){
-    size = newSize;
-}
-void vans::setProduct_type(const string& newType){
-    product_type = newType;
-}
-
-vans::~vans() {
-    cout << "deleting vans\n";
-}
-
-///shoes
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-shoes::shoes(int size_, string product_type_, string model_, string print_) : vans(size_, std::move(product_type_)){
-    model = std::move(model_);
-    print = std::move(print_);
-    cout << "constructed shoes:\nsize " << getSize() << "\nproduct_type " << getProduct_type() << "\nmodel " << model << "\nprint " << print << "\n\n";
-}
-
-string shoes::getPrint()const{
-    return print;
-}
-string shoes::getModel()const{
-    return model;
-}
-
-void shoes::setPrint(const string &newPrint){
-    print = newPrint;
-}
-void shoes::setModel(const string &newModel){
-    model = newModel;
-}
-
-void shoes::pall(){
-cout << "size " << getSize() << "\nproduct_type " << getProduct_type() << "\nmodel " << model << "\nprint " << print << "\n\n";
-}
-
-shoes::~shoes(){
-    cout << "deleting the shoes\n";
-}
-
-///clothes
-/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main() {
-    //vans v(34, "shoe");
-    shoes s(35, "shoe", "slip-ons", "blue");
-    s.setProduct_type("cockring");
-    cout << "noul tip de produs este " << s.getProduct_type() << endl;
+    menu::start();
     return 0;
 }
+
+//vector/string/ orice fara * clasic nu avem de ce sa folosim destructor
+//in clasele baxa destructorul
