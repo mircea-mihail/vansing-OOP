@@ -8,8 +8,8 @@
 //          ierarhie proprie cu baza std::exception sau derivată din std::exception (minim 2 clase)
 //          utilizare cu sens: de exemplu, throw în constructor, try/catch în main
 
-//  funcții și atribute static
-//  STL
+//**  funcții și atribute static
+//**  STL
 //  smart pointers
 //  cât mai multe const
 //  rescrs operator <<
@@ -26,37 +26,76 @@
 
 using namespace std;
 
+class outlet:vans{
+private:
+    static vector <shared_ptr<vans>> v;
+public:
+    outlet() = delete;
+    static void addVans(shared_ptr<vans>(newVans));
+    static shared_ptr<vans> getVans(int vansPos);
+};
+
+vector <shared_ptr<vans>>outlet::v;
+
+void outlet::addVans(shared_ptr<vans>(newVans)){
+    v.emplace_back(newVans);
+}
+
+shared_ptr<vans> outlet::getVans(int vansPos){
+    return v[vansPos];
+}
+
 class menu{
 private:
     static void print_options(){
-        cout << "1-add shoe      11-shoe data\n";
+        cout << "\n1-add shoe      11-shoe data\n";
         cout << "2-add clothing  \n";
         cout << "5-stop\n\n";
     }
-public:
-    static void start(){
-        static vector <shared_ptr<vans>> v;
-        bool go_loop = true;
-        string auxString; bool auxBool; int auxInt; float auxFloat;
-        shoes auxshoe;
 
+public:
+    menu() = delete;
+    static void start(){
+        static bool go_loop; static char auxChar;
+        static string auxString; static bool auxBool; static int auxInt; static float auxFloat;
+        static shared_ptr<shoes> auxshoe;
+        static shared_ptr<clothes> auxcloth;
+        go_loop = true;
         while(go_loop){
             print_options();
             int case_val;
             cin >> case_val;
             switch(case_val){
                 case(1):
-                    cout << "model: "; cin >> auxString;
-                    cout << "laces? "; cin >> auxBool;
+                    cout << "model:"; cin >> auxString;
+                    cout << "laces (y/n)? "; cin >> auxChar;
+                    auxBool = (auxChar == 'y' ? 1 : 0);
                     cout << "size:  "; cin >> auxInt;
                     cout << "price: "; cin >> auxFloat;
-                    auxshoe = new (shoes)(auxInt, auxFloat, auxString, auxBool);
-                    v.emplace_back(shared_ptr<vans>(&auxshoe));
+                    auxshoe = make_shared<shoes>(auxInt, auxFloat, auxString, auxBool);
+                    outlet::addVans(auxshoe);
                     break;
                 case(11):
                     cout << "what shoe to display data for?\n";
                     cin >> auxInt;
-                    cout << "size " << (*(v.begin() + auxInt))->getSize() << ", price " << (*(v.begin() + auxInt))->getPrice();
+                    auxshoe = dynamic_pointer_cast<shoes>(outlet::getVans(auxInt));
+                    auxshoe->pall();
+                    break;
+
+                case(2):
+                    cout << "sex: (m/f/o)"; cin >> auxChar;
+                    cout << "color: "; cin >> auxString;
+                    cout << "size:  "; cin >> auxInt;
+                    cout << "price: "; cin >> auxFloat;
+                    auxcloth = make_shared<clothes>(auxInt, auxFloat, auxChar, auxString);
+                    outlet::addVans(auxcloth);
+                    break;
+                case(21):
+                    cout << "what cloth to display data for?\n";
+                    cin >> auxInt;
+                    auxcloth = dynamic_pointer_cast<clothes>(outlet::getVans(auxInt));
+                    auxcloth->pall();
+                    break;
                 case(5):
                     go_loop = false;
                     break;

@@ -5,6 +5,13 @@
 #include "clothes.h"
 #include "vans.h"
 
+clothes::clothes(int size_, float price_, char sex_, string color_):vans(size_, price_){
+    sex = sex_;
+    color = color_;
+}
+
+clothes::clothes(const clothes &rhs):vans(rhs.size, rhs.price), sex(rhs.sex), color(rhs.color){}
+
 void clothes::setSex(char newSex){
     sex = newSex;
 }
@@ -20,7 +27,7 @@ string clothes::getColor()const{
 }
 
 void clothes::pall(){
-    cout << "sex " << sex << "\ncolor " << color << "\n\n";
+    cout << "sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 
 clothes::~clothes(){

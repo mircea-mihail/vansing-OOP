@@ -15,10 +15,10 @@ private:
     bool laces;
 
 public:
-    explicit shoes(int size_ = 0, float price = 0, string model_ = "", bool laces = false);
+    explicit shoes(int size_ = 0, float price_ = 0, string model_ = "", bool laces = false);
     shoes(const shoes &rhs);
 
-    shoes& operator=(const shoes *rhs);
+    shoes& operator=(shared_ptr<shoes> rhs);
 
     void setLaces(const bool &newLaces);
     void setModel(const string &newModel);

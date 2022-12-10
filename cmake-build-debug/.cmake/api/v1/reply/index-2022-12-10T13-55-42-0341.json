@@ -11,22 +11,22 @@
 			"cmake" : "/app/extra/clion/bin/cmake/linux/bin/cmake",
 			"cpack" : "/app/extra/clion/bin/cmake/linux/bin/cpack",
 			"ctest" : "/app/extra/clion/bin/cmake/linux/bin/ctest",
-			"root" : "/app/extra/clion/bin/cmake/linux/share/cmake-3.23"
+			"root" : "/app/extra/clion/bin/cmake/linux/share/cmake-3.24"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 23,
+			"minor" : 24,
 			"patch" : 2,
-			"string" : "3.23.2",
+			"string" : "3.24.2",
 			"suffix" : ""
 		}
 	},
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-ca56e7ff1bc5a1f51fe8.json",
+			"jsonFile" : "codemodel-v2-331bb9ceec2a14e17013.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-8d9c58e92c1e4f4e11ab.json",
+			"jsonFile" : "cache-v2-2f0d8240df33eecf994a.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-1aa165636abb25f77913.json",
+			"jsonFile" : "cmakeFiles-v1-5c9f5baf265d44f2d6c3.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -66,7 +66,7 @@
 	{
 		"cache-v2" : 
 		{
-			"jsonFile" : "cache-v2-8d9c58e92c1e4f4e11ab.json",
+			"jsonFile" : "cache-v2-2f0d8240df33eecf994a.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -76,7 +76,7 @@
 		},
 		"cmakeFiles-v1" : 
 		{
-			"jsonFile" : "cmakeFiles-v1-1aa165636abb25f77913.json",
+			"jsonFile" : "cmakeFiles-v1-5c9f5baf265d44f2d6c3.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -86,7 +86,7 @@
 		},
 		"codemodel-v2" : 
 		{
-			"jsonFile" : "codemodel-v2-ca56e7ff1bc5a1f51fe8.json",
+			"jsonFile" : "codemodel-v2-331bb9ceec2a14e17013.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
