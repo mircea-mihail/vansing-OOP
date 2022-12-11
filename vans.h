@@ -1,9 +1,6 @@
-//
-// Created by mircea on 12/7/22.
-//
-#include <iostream>
 #ifndef VANSING_OOP_VANS_H
 #define VANSING_OOP_VANS_H
+#include <iostream>
 
 class vans{
 protected:

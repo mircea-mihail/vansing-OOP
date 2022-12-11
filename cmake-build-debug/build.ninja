@@ -73,6 +73,18 @@ build CMakeFiles/vansing_oop.dir/clothes.cpp.o: CXX_COMPILER__vansing_oop_Debug 
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
 
+build CMakeFiles/vansing_oop.dir/menu.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/menu.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/menu.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/vansing_oop.dir
+  OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
+
+build CMakeFiles/vansing_oop.dir/outlet.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/outlet.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/outlet.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/vansing_oop.dir
+  OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target vansing_oop
@@ -81,7 +93,7 @@ build CMakeFiles/vansing_oop.dir/clothes.cpp.o: CXX_COMPILER__vansing_oop_Debug 
 #############################################
 # Link the executable vansing_oop
 
-build vansing_oop: CXX_EXECUTABLE_LINKER__vansing_oop_Debug CMakeFiles/vansing_oop.dir/main.cpp.o CMakeFiles/vansing_oop.dir/vans.cpp.o CMakeFiles/vansing_oop.dir/shoes.cpp.o CMakeFiles/vansing_oop.dir/clothes.cpp.o
+build vansing_oop: CXX_EXECUTABLE_LINKER__vansing_oop_Debug CMakeFiles/vansing_oop.dir/main.cpp.o CMakeFiles/vansing_oop.dir/vans.cpp.o CMakeFiles/vansing_oop.dir/shoes.cpp.o CMakeFiles/vansing_oop.dir/clothes.cpp.o CMakeFiles/vansing_oop.dir/menu.cpp.o CMakeFiles/vansing_oop.dir/outlet.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   POST_BUILD = :

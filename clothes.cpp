@@ -1,9 +1,4 @@
-//
-// Created by mircea on 12/7/22.
-//
-
 #include "clothes.h"
-#include "vans.h"
 
 clothes::clothes(int size_, float price_, char sex_, string color_):vans(size_, price_){
     sex = sex_;

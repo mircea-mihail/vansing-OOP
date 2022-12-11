@@ -1,10 +1,8 @@
-//
-// Created by mircea on 12/7/22.
-//
-#include <iostream>
-#include "vans.h"
 #ifndef VANSING_OOP_SHOES_H_
 #define VANSING_OOP_SHOES_H_
+#include <iostream>
+#include <memory>
+#include "vans.h"
 
 using namespace std;
 

@@ -1,8 +1,3 @@
-//
-// Created by mircea on 12/7/22.
-//
-#include <iostream>
-#include <memory>
 #include "shoes.h"
 
 using namespace std;

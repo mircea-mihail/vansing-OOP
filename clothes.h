@@ -1,11 +1,9 @@
-//
-// Created by mircea on 12/7/22.
-//
-
-#include <iostream>
-#include "vans.h"
 #ifndef VANSING_OOP_CLOTHES_H_
 #define VANSING_OOP_CLOTHES_H_
+#include <iostream>
+#include "vans.h"
+#include "vans.h"
+
 
 using namespace std;
 
