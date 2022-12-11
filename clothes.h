@@ -11,6 +11,7 @@ using namespace std;
 
 class clothes : public vans{
 private:
+    string item;
     char sex;
     string color;
 public:
