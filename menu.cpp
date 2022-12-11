@@ -51,6 +51,7 @@ void menu::start(){
             case(21):
                 cout << "what cloth to display data for?\n";
                 cin >> auxInt;
+                //ce pot face cu acea dereferentiere ca sa evit warningul
                 if(typeid(clothes) == typeid(*(outlet::getVans(auxInt)))) {
                     auxcloth = dynamic_pointer_cast<clothes>(outlet::getVans(auxInt));
                     auxcloth->pall();

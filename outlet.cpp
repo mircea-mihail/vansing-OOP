@@ -1,6 +1,6 @@
 #include "outlet.h"
 
-void outlet::addVans(shared_ptr<vans>(newVans)){
+void outlet::addVans(const shared_ptr<vans>(&newVans)){
     v.emplace_back(newVans);
 }
 

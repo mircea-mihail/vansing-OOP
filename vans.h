@@ -9,6 +9,8 @@ protected:
 
 public:
     explicit vans(int size_ = 0, float price_ = 0);
+    vans(const vans& rhs);
+    vans& operator= (const vans& rhs);
 
     void setSize(int newSize);
     void setPrice(float newPrice);
@@ -18,7 +20,7 @@ public:
 
     virtual void pall() = 0;
 
-    ~vans();
+    virtual~vans();
 };
 
 

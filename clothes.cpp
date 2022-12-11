@@ -1,11 +1,23 @@
 #include "clothes.h"
 
+#include <utility>
+
 clothes::clothes(int size_, float price_, char sex_, string color_):vans(size_, price_){
     sex = sex_;
-    color = color_;
+    color = std::move(color_);
 }
 
 clothes::clothes(const clothes &rhs):vans(rhs.size, rhs.price), sex(rhs.sex), color(rhs.color){}
+
+clothes& clothes::operator= (const clothes &rhs){
+    if(this != &rhs){
+        sex = rhs.sex;
+        color = rhs.color;
+        size = rhs.size;
+        price = rhs.price;
+    }
+    return *this;
+}
 
 void clothes::setSex(char newSex){
     sex = newSex;
@@ -25,6 +37,4 @@ void clothes::pall(){
     cout << "sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 
-clothes::~clothes(){
-    cout<<"deleting clothes\n";
-}
+clothes::~clothes() = default;

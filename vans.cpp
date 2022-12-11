@@ -7,6 +7,16 @@ vans::vans(int size_, float price_){
     //cout << "constructed vans:\nsize " << size << "\nproduct_type " <<product_type << "\n\n";
 }
 
+vans::vans(const vans &rhs):vans(rhs.size, rhs.price){};
+
+vans & vans::operator= (const vans& rhs){
+    if(this != &rhs){
+        size = rhs.size;
+        price = rhs.price;
+    }
+    return *this;
+}
+
 int vans::getSize() const{
     return size;
 }
@@ -22,6 +32,4 @@ void vans::setPrice(const float newPrice){
     price = newPrice;
 }
 
-vans::~vans() {
-    std::cout << "deleting vans\n";
-}
+vans::~vans() = default;

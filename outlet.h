@@ -19,7 +19,7 @@ private:
     static vector <shared_ptr<vans>> v;
 public:
     outlet() = delete;
-    static void addVans(shared_ptr<vans>(newVans));
+    static void addVans(const shared_ptr<vans>(&newVans));
     static shared_ptr<vans> getVans(int vansPos);
     static void printShoes();
     static void printClothes();
