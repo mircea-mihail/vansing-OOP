@@ -9,12 +9,12 @@ using namespace std;
 
 class clothes : public vans{
 private:
+    string item;
     char sex;
     string color;
 public:
-    explicit clothes(int size_ = 0, float price_ = 0, char sex_ = ' ', string color_ = "");
+    explicit clothes(int size_ = 0, float price_ = 0, string item_ = "",  char sex_ = ' ', string color_ = "");
     clothes(const clothes &rhs);
-
     clothes& operator= (const clothes &rhs);
 
     void setSex(char newSex);

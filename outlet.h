@@ -19,11 +19,19 @@ private:
     static vector <shared_ptr<vans>> v;
 public:
     outlet() = delete;
+
     static void addVans(const shared_ptr<vans>(&newVans));
     static shared_ptr<vans> getVans(int vansPos);
+
     static void printShoes();
     static void printClothes();
     static void printAll();
+
+    static void addDefault();
+    static void deleteItem(int a);
+    static void deleteAll();
+
+    ~outlet() override;
 };
 
 

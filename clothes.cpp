@@ -2,15 +2,17 @@
 
 #include <utility>
 
-clothes::clothes(int size_, float price_, char sex_, string color_):vans(size_, price_){
+clothes::clothes(int size_, float price_, string item_, char sex_, string color_):vans(size_, price_){
+    item = item_;
     sex = sex_;
     color = std::move(color_);
 }
 
-clothes::clothes(const clothes &rhs):vans(rhs.size, rhs.price), sex(rhs.sex), color(rhs.color){}
+clothes::clothes(const clothes &rhs):vans(rhs.size, rhs.price), item(rhs.item), sex(rhs.sex), color(rhs.color){}
 
 clothes& clothes::operator= (const clothes &rhs){
     if(this != &rhs){
+        item = rhs.item;
         sex = rhs.sex;
         color = rhs.color;
         size = rhs.size;
@@ -34,7 +36,7 @@ string clothes::getColor()const{
 }
 
 void clothes::pall(){
-    cout << "sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
+    cout << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 
 clothes::~clothes() = default;

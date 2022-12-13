@@ -15,7 +15,6 @@ private:
 public:
     explicit shoes(int size_ = 0, float price_ = 0, string model_ = "", bool laces = false);
     shoes(const shoes &rhs);
-
     shoes& operator=(const shared_ptr<shoes>& rhs);
 
     void setLaces(const bool &newLaces);

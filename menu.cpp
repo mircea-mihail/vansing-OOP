@@ -1,13 +1,14 @@
 #include "menu.h"
 
 void menu::print_options(){
-    cout << "\nshoes:   1-add  11-data  12-all\n";
-    cout << "clothes: 2-add  21-data  22-all\n";
-    cout << "all:     5-stop 51-all\n\n";
+    cout << "\nshoes:   1-add   11-data  12-all\n";
+    cout << "clothes: 2-add   21-data  22-all\n";
+    cout << "all:     3-stop  31-all   32-add def\n";
+    cout << "delete:  4-item  41-all\n\n";
 }
 
 void menu::start(){
-    bool go_loop; char auxChar;
+    bool go_loop; char auxChar; string auxString2;
     string auxString; bool auxBool; int auxInt; float auxFloat;
     shared_ptr<shoes> auxshoe;
     shared_ptr<clothes> auxcloth;
@@ -32,6 +33,8 @@ void menu::start(){
                 if(typeid(shoes) == typeid(*(outlet::getVans(auxInt)))) {
                     auxshoe = dynamic_pointer_cast<shoes>(outlet::getVans(auxInt));
                     auxshoe->pall();
+                    //?cum ar trebui sa ma ajute mai exact << ?
+                    //cout << endl << endl << auxshoe << endl << endl;
                 }
                 else cout << "the item is not a shoe\n";
                 break;
@@ -40,12 +43,13 @@ void menu::start(){
                 break;
 
             case(2):
+                cout << "item:     "; cin >>auxString;
                 cout << "sex(m/f): "; cin >> auxChar;
                 if(auxChar != 'm' && auxChar != 'f') auxChar = 'u';
-                cout << "color:    "; cin >> auxString;
+                cout << "color:    "; cin >> auxString2;
                 cout << "size:     "; cin >> auxInt;
                 cout << "price:    "; cin >> auxFloat;
-                auxcloth = make_shared<clothes>(auxInt, auxFloat, auxChar, auxString);
+                auxcloth = make_shared<clothes>(auxInt, auxFloat, auxString, auxChar, auxString2);
                 outlet::addVans(auxcloth);
                 break;
             case(21):
@@ -62,11 +66,23 @@ void menu::start(){
                 outlet::printClothes();
                 break;
 
-            case(5):
+            case(3):
                 go_loop = false;
                 break;
-            case(51):
+            case(31):
                 outlet::printAll();
+                break;
+            case(32):
+                outlet::addDefault();
+                break;
+            case(4):
+                cout << "what item to delete\n";
+                cin >> auxInt;
+                outlet::deleteItem(auxInt);
+                break;
+            case(41):
+                cout<<"are you sure you want to delete everything? (y/n)\n";
+                cin >> auxChar; if(auxChar == 'y' || auxChar == 'Y') outlet::deleteAll();
                 break;
             default:
                 cout << "invalid input\n";

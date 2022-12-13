@@ -2,7 +2,7 @@
 //**  moșteniri
 //**          funcții virtuale (pure) apelate prin pointeri de clasa bază
 //**          apelarea constructorului din clasa de bază (trebuie să fie parametrizat)
-//          suprascris cc/op=
+//**          suprascris cc/op=
 //**  dynamic_cast
 //  excepții
 //          ierarhie proprie cu baza std::exception sau derivată din std::exception (minim 2 clase)
@@ -12,7 +12,7 @@
 //**  STL
 //**  smart pointers
 //**  cât mai multe const
-//  rescrs operator <<
+//**  rescrs operator <<
 //**  citirea informațiilor complete a n obiecte (de diferite tipuri), memorarea și afișarea acestora
 //**  meniu interactiv
 
@@ -31,5 +31,5 @@ int main() {
     return 0;
 }
 
-//vector/string/ orice fara * clasic nu avem de ce sa folosim destructor
 //in clasele baxa destructorul
+//vector/string/ orice fara * clasic nu avem de ce sa folosim destructor
