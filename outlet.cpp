@@ -8,6 +8,10 @@ shared_ptr<vans> outlet::getVans(int vansPos){
     return v[vansPos];
 }
 
+unsigned long outlet::no_items(){
+    return v.size();
+}
+
 void outlet::printShoes(){
     for(auto &i: v){
         if(typeid(shoes) == typeid(*i)) {

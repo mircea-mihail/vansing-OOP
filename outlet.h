@@ -22,6 +22,7 @@ public:
 
     static void addVans(const shared_ptr<vans>(&newVans));
     static shared_ptr<vans> getVans(int vansPos);
+    static unsigned long no_items();
 
     static void printShoes();
     static void printClothes();

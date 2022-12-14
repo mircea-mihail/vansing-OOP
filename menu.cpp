@@ -3,8 +3,8 @@
 void menu::print_options(){
     cout << "\nshoes:   1-add   11-data  12-all\n";
     cout << "clothes: 2-add   21-data  22-all\n";
-    cout << "all:     3-stop  31-all   32-add def\n";
-    cout << "delete:  4-item  41-all\n\n";
+    cout << "all:     3-els   31-all   32-add def\n";
+    cout << "delete:  4-item  41-all   42-end\n\n";
 }
 
 void menu::start(){
@@ -67,7 +67,7 @@ void menu::start(){
                 break;
 
             case(3):
-                go_loop = false;
+                cout <<"there are " << outlet::no_items() << " items\n";
                 break;
             case(31):
                 outlet::printAll();
@@ -75,6 +75,7 @@ void menu::start(){
             case(32):
                 outlet::addDefault();
                 break;
+
             case(4):
                 cout << "what item to delete\n";
                 cin >> auxInt;
@@ -83,6 +84,9 @@ void menu::start(){
             case(41):
                 cout<<"are you sure you want to delete everything? (y/n)\n";
                 cin >> auxChar; if(auxChar == 'y' || auxChar == 'Y') outlet::deleteAll();
+                break;
+            case(42):
+                go_loop = false;
                 break;
             default:
                 cout << "invalid input\n";
