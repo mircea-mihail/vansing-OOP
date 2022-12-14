@@ -8,6 +8,7 @@ void menu::print_options(){
 }
 
 void menu::start(){
+    outlet o1;
     bool go_loop; char auxChar; string auxString2;
     string auxString; bool auxBool; int auxInt; float auxFloat;
     shared_ptr<shoes> auxshoe;
@@ -25,20 +26,20 @@ void menu::start(){
                 cout << "size:       "; cin >> auxInt;
                 cout << "price:      "; cin >> auxFloat;
                 auxshoe = make_shared<shoes>(auxInt, auxFloat, auxString, auxBool);
-                outlet::addVans(auxshoe);
+                o1.addVans(auxshoe);
                 break;
             case(11):
                 cout << "what shoe to display data for?\n";
                 cin >> auxInt;
-                if(typeid(shoes) == typeid(*(outlet::getVans(auxInt)))) {
-                    auxshoe = dynamic_pointer_cast<shoes>(outlet::getVans(auxInt));
+                if(typeid(shoes) == typeid(*(o1.getVans(auxInt)))) {
+                    auxshoe = dynamic_pointer_cast<shoes>(o1.getVans(auxInt));
                     cout << auxshoe; // same as auxshoe->pall();
                     cout << endl << endl << *auxshoe << endl << endl;
                 }
                 else cout << "the item is not a shoe\n";
                 break;
             case(12):
-                outlet::printShoes();
+                o1.printShoes();
                 break;
 
             case(2):
@@ -49,7 +50,7 @@ void menu::start(){
                 cout << "size:     "; cin >> auxInt;
                 cout << "price:    "; cin >> auxFloat;
                 auxcloth = make_shared<clothes>(auxInt, auxFloat, auxString, auxChar, auxString2);
-                outlet::addVans(auxcloth);
+                o1.addVans(auxcloth);
                 break;
             case(21):
                 cout << "what cloth to display data for?\n";
@@ -60,34 +61,34 @@ void menu::start(){
                     ca difera in acest fel typeof
                     ca sa rezolv pun typeid in ceva auto&
                  */
-                if(typeid(clothes) == typeid(*(outlet::getVans(auxInt)))) {
-                    auxcloth = dynamic_pointer_cast<clothes>(outlet::getVans(auxInt));
+                if(typeid(clothes) == typeid(*(o1.getVans(auxInt)))) {
+                    auxcloth = dynamic_pointer_cast<clothes>(o1.getVans(auxInt));
                     cout << auxcloth; //same as auxcloth->pall();
                 }
                 else cout << "the item is not a clothing item\n";
                 break;
             case(22):
-                outlet::printClothes();
+                o1.printClothes();
                 break;
 
             case(3):
-                cout <<"there are " << outlet::no_items() << " items\n";
+                cout <<"there are " << o1.no_items() << " items\n";
                 break;
             case(31):
-                outlet::printAll();
+                o1.printAll();
                 break;
             case(32):
-                outlet::addDefault();
+                o1.addDefault();
                 break;
 
             case(4):
                 cout << "what item to delete\n";
                 cin >> auxInt;
-                outlet::deleteItem(auxInt);
+                o1.deleteItem(auxInt);
                 break;
             case(41):
                 cout<<"are you sure you want to delete everything? (y/n)\n";
-                cin >> auxChar; if(auxChar == 'y' || auxChar == 'Y') outlet::deleteAll();
+                cin >> auxChar; if(auxChar == 'y' || auxChar == 'Y') o1.deleteAll();
                 break;
             case(42):
                 go_loop = false;

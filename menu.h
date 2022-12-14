@@ -15,6 +15,7 @@ class menu{
 private:
     static void print_options();
 
+
 public:
     menu() = delete;
     static void start();

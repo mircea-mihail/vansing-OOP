@@ -1,18 +1,10 @@
 # ninja log v5
-2	1103	1671045668847798336	CMakeFiles/vansing_oop.dir/outlet.cpp.o	53b333170070bf03
-1	767	1671045668511788219	CMakeFiles/vansing_oop.dir/shoes.cpp.o	735d786da9fd1636
-0	20	1671045960688319109	build.ninja	cc3ddf1c2a9e61bf
-2	666	1671045668411785208	CMakeFiles/vansing_oop.dir/IOStream.cpp.o	a72954c75431185c
-1	666	1671045668411785208	CMakeFiles/vansing_oop.dir/vans.cpp.o	fb5d5643d83e0ea4
-1	793	1671045668539789062	CMakeFiles/vansing_oop.dir/main.cpp.o	ed1f628a1b0914b5
-1103	1224	1671045668967801949	vansing_oop	18760ff36c6bd775
-2	670	1671045668415785328	CMakeFiles/vansing_oop.dir/clothes.cpp.o	9144687a8bd0430a
-2	909	1671045668651792434	CMakeFiles/vansing_oop.dir/menu.cpp.o	6ab7f2d5254fd4a4
-1	353	1671051376937597106	CMakeFiles/vansing_oop.dir/vans.cpp.o	fb5d5643d83e0ea4
-1	360	1671051376945597256	CMakeFiles/vansing_oop.dir/clothes.cpp.o	9144687a8bd0430a
-2	372	1671051376957597484	CMakeFiles/vansing_oop.dir/IOStream.cpp.o	a72954c75431185c
+1	537	1671055603607912225	CMakeFiles/vansing_oop.dir/outlet.cpp.o	53b333170070bf03
 1	440	1671051377025598769	CMakeFiles/vansing_oop.dir/shoes.cpp.o	735d786da9fd1636
-1	562	1671051377149601114	CMakeFiles/vansing_oop.dir/main.cpp.o	ed1f628a1b0914b5
-2	588	1671051377173601568	CMakeFiles/vansing_oop.dir/menu.cpp.o	6ab7f2d5254fd4a4
-2	777	1671051377361605125	CMakeFiles/vansing_oop.dir/outlet.cpp.o	53b333170070bf03
-777	845	1671051377429606410	vansing_oop	18760ff36c6bd775
+0	20	1671055950993249377	build.ninja	cc3ddf1c2a9e61bf
+2	372	1671051376957597484	CMakeFiles/vansing_oop.dir/IOStream.cpp.o	a72954c75431185c
+1	353	1671051376937597106	CMakeFiles/vansing_oop.dir/vans.cpp.o	fb5d5643d83e0ea4
+0	328	1671055615035844637	CMakeFiles/vansing_oop.dir/main.cpp.o	ed1f628a1b0914b5
+463	527	1671055615235843453	vansing_oop	18760ff36c6bd775
+1	360	1671051376945597256	CMakeFiles/vansing_oop.dir/clothes.cpp.o	9144687a8bd0430a
+0	463	1671055615171843832	CMakeFiles/vansing_oop.dir/menu.cpp.o	6ab7f2d5254fd4a4
