@@ -10,13 +10,15 @@ shoes::shoes(int size_, float price_, string model_, bool laces_) : vans(size_, 
 shoes::shoes(const shoes &rhs):vans(rhs.size, rhs.price), model(rhs.model), laces(rhs.laces) {}
 
 //ce pot face aici ?
-shoes& shoes::operator=(const std::shared_ptr<shoes>& rhs){
-//    if(this != (*rhs) {
-    this->model = (*rhs).model;
-    this->laces = (*rhs).laces;
-    this->price = (*rhs).price;
-    this->size = (*rhs).size;
-    return *this;
+shoes& shoes::operator=(const shoes& rhs){
+    if(this != &rhs) {
+        this->model = (rhs).model;
+        this->laces = (rhs).laces;
+        this->price = (rhs).price;
+        this->size = (rhs).size;
+    }
+        return *this;
+
 }
 bool shoes::getLaces()const{
     return laces;
@@ -31,7 +33,7 @@ void shoes::setModel(const string &newModel){
     model = newModel;
 }
 
-void shoes::pall(){
+void shoes::pall()const{
     cout << model << (laces == 1 ? ", with laces" : ", no laces") << ", size " << size << ", price " << price <<" lei\n";
 }
 

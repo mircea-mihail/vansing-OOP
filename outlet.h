@@ -14,7 +14,7 @@
 
 using namespace std;
 
-class outlet:vans{
+class outlet{
 private:
     static vector <shared_ptr<vans>> v;
 public:
@@ -29,10 +29,10 @@ public:
     static void printAll();
 
     static void addDefault();
-    static void deleteItem(int a);
+    static void deleteItem(int pos);
     static void deleteAll();
 
-    ~outlet() override;
+    ~outlet();
 };
 
 

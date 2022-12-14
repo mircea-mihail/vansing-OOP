@@ -1,12 +1,12 @@
 #include "IOStream.h"
 
 std::ostream& operator<< (std::ostream & os, const IOStream & obj) {
-    obj.Print(os);
+    obj.pall();
     return os;
 }
 
 std::ostream& operator<< (std::ostream & os, const IOStream * obj) {
-    obj -> Print(os);
+    obj -> pall();
     return os;
 }
 

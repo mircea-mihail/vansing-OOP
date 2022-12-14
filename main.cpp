@@ -15,7 +15,7 @@
 //**  rescrs operator <<
 //**  citirea informațiilor complete a n obiecte (de diferite tipuri), memorarea și afișarea acestora
 //**  meniu interactiv
-
+// draw.io
 #include <vector>
 #include <memory>
 #include "vans.h"
@@ -24,6 +24,9 @@
 
 using namespace std;
 
+//EVERYTHING NEEDS TO BE WITHIN A CLASS
+//NOT OKAY:
+//really really needs to go
 vector <shared_ptr<vans>>outlet::v;
 
 int main() {

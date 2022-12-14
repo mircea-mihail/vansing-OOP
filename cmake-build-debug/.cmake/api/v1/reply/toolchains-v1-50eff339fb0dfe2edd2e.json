@@ -10,14 +10,14 @@
 				{
 					"includeDirectories" : 
 					[
-						"/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include",
-						"/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include-fixed",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/include",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/include-fixed",
 						"/usr/include/x86_64-linux-gnu",
 						"/usr/include"
 					],
 					"linkDirectories" : 
 					[
-						"/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0",
 						"/usr/lib/x86_64-linux-gnu",
 						"/usr/lib64",
 						"/lib/x86_64-linux-gnu",
@@ -36,7 +36,7 @@
 					]
 				},
 				"path" : "/usr/bin/cc",
-				"version" : "11.3.0"
+				"version" : "12.1.0"
 			},
 			"language" : "C",
 			"sourceFileExtensions" : 
@@ -53,17 +53,17 @@
 				{
 					"includeDirectories" : 
 					[
-						"/usr/include/c++/11.3.0",
-						"/usr/include/c++/11.3.0/x86_64-unknown-linux-gnu",
-						"/usr/include/c++/11.3.0/backward",
-						"/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include",
-						"/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include-fixed",
+						"/usr/include/c++/12.1.0",
+						"/usr/include/c++/12.1.0/x86_64-unknown-linux-gnu",
+						"/usr/include/c++/12.1.0/backward",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/include",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/include-fixed",
 						"/usr/include/x86_64-linux-gnu",
 						"/usr/include"
 					],
 					"linkDirectories" : 
 					[
-						"/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0",
 						"/usr/lib/x86_64-linux-gnu",
 						"/usr/lib64",
 						"/lib/x86_64-linux-gnu",
@@ -84,7 +84,7 @@
 					]
 				},
 				"path" : "/usr/bin/c++",
-				"version" : "11.3.0"
+				"version" : "12.1.0"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 

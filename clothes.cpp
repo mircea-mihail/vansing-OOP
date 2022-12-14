@@ -35,7 +35,7 @@ string clothes::getColor()const{
     return color;
 }
 
-void clothes::pall(){
+void clothes::pall()const{
     cout << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 

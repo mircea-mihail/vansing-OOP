@@ -15,20 +15,20 @@ unsigned long outlet::no_items(){
 void outlet::printShoes(){
     for(auto &i: v){
         if(typeid(shoes) == typeid(*i)) {
-            i->pall();
+            cout << i;
         }
     }
 }
 void outlet::printClothes(){
     for(auto &i : v){
         if(typeid(clothes) == typeid(*i))
-            i->pall();
+            cout << i;
     }
 }
 
 void outlet::printAll(){
     for(auto &i: v){
-        i->pall();
+        cout << i;
     }
 }
 
@@ -47,8 +47,8 @@ void outlet::addDefault(){
     addVans(make_shared<clothes>(42, 50, "socks", 'u', "rainbow"));
 }
 
-void outlet::deleteItem(int a){
-    v.erase(v.begin() + a);
+void outlet::deleteItem(int pos){
+    v.erase(v.begin() + pos);
 }
 
 void outlet::deleteAll(){

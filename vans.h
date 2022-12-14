@@ -1,8 +1,9 @@
 #ifndef VANSING_OOP_VANS_H
 #define VANSING_OOP_VANS_H
 #include <iostream>
+#include "IOStream.h"
 
-class vans{
+class vans:public IOStream{
 protected:
     int size;
     float price;
@@ -18,9 +19,7 @@ public:
     int getSize() const;
     float getPrice() const;
 
-    virtual void pall() = 0;
-
-    virtual~vans();
+    ~vans() override;
 };
 
 

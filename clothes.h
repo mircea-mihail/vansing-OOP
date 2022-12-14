@@ -23,7 +23,7 @@ public:
     char getSex()const;
     string getColor()const;
 
-    void pall() override;
+    void pall() const override;
 
     ~clothes() override;
 };

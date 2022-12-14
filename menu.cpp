@@ -32,9 +32,8 @@ void menu::start(){
                 cin >> auxInt;
                 if(typeid(shoes) == typeid(*(outlet::getVans(auxInt)))) {
                     auxshoe = dynamic_pointer_cast<shoes>(outlet::getVans(auxInt));
-                    auxshoe->pall();
-                    //?cum ar trebui sa ma ajute mai exact << ?
-                    //cout << endl << endl << auxshoe << endl << endl;
+                    cout << auxshoe; // same as auxshoe->pall();
+                    cout << endl << endl << *auxshoe << endl << endl;
                 }
                 else cout << "the item is not a shoe\n";
                 break;
@@ -56,9 +55,14 @@ void menu::start(){
                 cout << "what cloth to display data for?\n";
                 cin >> auxInt;
                 //ce pot face cu acea dereferentiere ca sa evit warningul
+                /*
+                    ce e scris in typeid se executa si se evalueaza (de acolo provine warningul)
+                    ca difera in acest fel typeof
+                    ca sa rezolv pun typeid in ceva auto&
+                 */
                 if(typeid(clothes) == typeid(*(outlet::getVans(auxInt)))) {
                     auxcloth = dynamic_pointer_cast<clothes>(outlet::getVans(auxInt));
-                    auxcloth->pall();
+                    cout << auxcloth; //same as auxcloth->pall();
                 }
                 else cout << "the item is not a clothing item\n";
                 break;

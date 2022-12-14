@@ -7,6 +7,7 @@
 #include "clothes.h"
 #include "vans.h"
 #include "outlet.h"
+#include "IOStream.h"
 
 using namespace std;
 
