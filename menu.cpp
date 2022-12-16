@@ -1,7 +1,7 @@
 #include "menu.h"
 #include "exceptions.h"
 
-void menu::print_options(){
+void menu::printOptions(){
     cout << "\nshoes:   1-add   11-data  12-all\n";
     cout << "clothes: 2-add   21-data  22-all\n";
     cout << "all:     3-els   31-all   32-add def\n";
@@ -24,10 +24,10 @@ void menu::start(){
                     cout << "model:      ";
                     cin >> auxString;
                     cout << "laces(y/n): ";
-                    cin >> auxString;
-                    if(auxString[1] != '\0')
+                    cin >> auxString2;
+                    if(auxString2[1] != '\0')
                         throw tooManyChars();
-                    auxChar = auxString[0];
+                    auxChar = auxString2[0];
                     if (auxChar == 'y' || auxChar == 'Y')
                         auxBool = true;
                     else
@@ -59,10 +59,10 @@ void menu::start(){
                     cout << "item:     ";
                     cin >> auxString;
                     cout << "sex(m/f): ";
-                    cin >> auxString;
-                    if(auxString[1] != '\0')
+                    cin >> auxString2;
+                    if(auxString2[1] != '\0')
                         throw tooManyChars();
-                    auxChar = auxString[0];
+                    auxChar = auxString2[0];
                     if (auxChar != 'm' && auxChar != 'f') auxChar = 'u';
                     cout << "color:    ";
                     cin >> auxString2;
@@ -101,6 +101,8 @@ void menu::start(){
                 case (4):
                     cout << "what item to delete\n";
                     cin >> auxInt;
+                    if(auxInt < 0 || auxInt >= outlet::noItems())
+                        throw(outOfBounds());
                     outlet::deleteItem(auxInt);
                     break;
                 case (41):

@@ -30,7 +30,7 @@ void outlet::printAll(){
     for(auto &i: v){
         cout << i;
     }
-    cout << '(' << v.size() << " elements)" << endl;
+    cout << '(' << v.size() << " items)" << endl;
 }
 
 void outlet::addDefault(){
