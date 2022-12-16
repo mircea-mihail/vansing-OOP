@@ -5,8 +5,8 @@
 //**          suprascris cc/op=
 //**  dynamic_cast
 //  excepții
-//          ierarhie proprie cu baza std::exception sau derivată din std::exception (minim 2 clase)
-//          utilizare cu sens: de exemplu, throw în constructor, try/catch în main
+// **         ierarhie proprie cu baza std::exception sau derivată din std::exception (minim 2 clase)
+//**          utilizare cu sens: de exemplu, throw în constructor, try/catch în main
 
 //**  funcții și atribute static
 //**  STL
@@ -20,14 +20,10 @@
 
 using namespace std;
 
-//EVERYTHING NEEDS TO BE WITHIN A CLASS
-//STATIC VARIABLES
-//MORE METHODS IN VANS CLOTHES AND SHOES maybe
+vector<shared_ptr<vans>> outlet::v;
+
 
 int main() {
     menu::start();
     return 0;
 }
-
-//in clasele baxa destructorul
-//vector/string/ orice fara * clasic nu avem de ce sa folosim destructor

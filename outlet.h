@@ -16,21 +16,21 @@ using namespace std;
 
 class outlet{
 private:
-    vector <shared_ptr<vans>> v;
+    static vector <shared_ptr<vans>> v;
 public:
-    outlet() = default;
+    outlet() = delete;
 
-    void addVans(const shared_ptr<vans>(&newVans));
-    shared_ptr<vans> getVans(int vansPos);
-    unsigned long no_items();
+    static void addVans(const shared_ptr<vans>(&newVans));
+    static shared_ptr<vans> getVans(int vansPos);
+    static unsigned long no_items();
 
-    void printShoes();
-    void printClothes();
-    void printAll();
+    static void printShoes();
+    static void printClothes();
+    static void printAll();
 
-    void addDefault();
-    void deleteItem(int pos);
-    void deleteAll();
+    static void addDefault();
+    static void deleteItem(int pos);
+    static void deleteAll();
 
     ~outlet();
 };
