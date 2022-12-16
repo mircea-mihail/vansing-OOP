@@ -4,8 +4,8 @@
 //**          apelarea constructorului din clasa de bază (trebuie să fie parametrizat)
 //**          suprascris cc/op=
 //**  dynamic_cast
-//  excepții
-// **         ierarhie proprie cu baza std::exception sau derivată din std::exception (minim 2 clase)
+//**  excepții
+//**          ierarhie proprie cu baza std::exception sau derivată din std::exception (minim 2 clase)
 //**          utilizare cu sens: de exemplu, throw în constructor, try/catch în main
 
 //**  funcții și atribute static

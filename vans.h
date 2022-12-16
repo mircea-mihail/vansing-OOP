@@ -19,6 +19,8 @@ public:
     int getSize() const;
     float getPrice() const;
 
+    static void brandPrint();
+
     ~vans() override;
 };
 

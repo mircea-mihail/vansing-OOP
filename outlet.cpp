@@ -56,4 +56,8 @@ void outlet::deleteAll(){
     v.clear();
 }
 
+void outlet::callBrand() {
+    v[v.size() - 1]->brandPrint();
+}
+
 outlet::~outlet() = default;

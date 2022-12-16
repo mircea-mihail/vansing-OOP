@@ -32,4 +32,15 @@ void vans::setPrice(const float newPrice){
     price = newPrice;
 }
 
+void vans::brandPrint(){
+    cout << "                         \n"
+            "   )       )             \n"
+            "  /((   ( /(   (     (   \n"
+            " (_))\\  )(_))  )\\ )  )\\  \n"
+            " _)((_)((_)_  _(_/( ((_) \n"
+            " \\ V / / _` || ' \\))(_-< \n"
+            "  \\_/  \\__,_||_||_| /__/ \n"
+            "                         ";
+}
+
 vans::~vans() = default;

@@ -32,6 +32,8 @@ public:
     static void deleteItem(int pos);
     static void deleteAll();
 
+    static void callBrand();
+
     ~outlet();
 };
 

@@ -38,6 +38,7 @@ void menu::start(){
                     cin >> auxFloat;
                     auxshoe = make_shared<shoes>(auxInt, auxFloat, auxString, auxBool);
                     outlet::addVans(auxshoe);
+                    outlet::callBrand();
                     break;
                 case (11):
                     cout << "what shoe to display data for?\n";
@@ -71,6 +72,7 @@ void menu::start(){
                     cin >> auxFloat;
                     auxcloth = make_shared<clothes>(auxInt, auxFloat, auxString, auxChar, auxString2);
                     outlet::addVans(auxcloth);
+                    outlet::callBrand();
                     break;
                 case (21):
                     cout << "what cloth to display data for?\n";
