@@ -3,7 +3,7 @@
 #include <utility>
 
 clothes::clothes(int size_, float price_, string item_, char sex_, string color_):vans(size_, price_){
-    item = item_;
+    item = std::move(item_);
     sex = sex_;
     color = std::move(color_);
 }
@@ -35,8 +35,8 @@ string clothes::getColor()const{
     return color;
 }
 
-void clothes::pall()const{
-    cout << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
+void clothes::pall(std::ostream &os)const{
+    os << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 
 void clothes::printClothesAsc() {

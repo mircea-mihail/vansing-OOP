@@ -25,7 +25,7 @@ public:
 
     static void printShoeAsc();
 
-    void pall()const override;
+    void pall(std::ostream &)const override;
 
     ~shoes() override;
 };

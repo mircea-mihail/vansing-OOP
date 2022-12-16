@@ -23,7 +23,7 @@ public:
     char getSex()const;
     string getColor()const;
 
-    void pall() const override;
+    void pall(std::ostream &) const override;
     static void printClothesAsc();
 
     ~clothes() override;

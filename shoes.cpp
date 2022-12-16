@@ -9,7 +9,6 @@ shoes::shoes(int size_, float price_, string model_, bool laces_) : vans(size_, 
 
 shoes::shoes(const shoes &rhs):vans(rhs.size, rhs.price), model(rhs.model), laces(rhs.laces) {}
 
-//ce pot face aici ?
 shoes& shoes::operator=(const shoes& rhs){
     if(this != &rhs) {
         this->model = (rhs).model;
@@ -42,8 +41,8 @@ void shoes::printShoeAsc(){
             "\\_____/|_/_/\n";
 }
 
-void shoes::pall()const{
-    cout << model << (laces == 1 ? ", with laces" : ", no laces") << ", size " << size << ", price " << price <<" lei\n";
+void shoes::pall(std::ostream & os)const{
+    os << model << (laces == 1 ? ", with laces" : ", no laces") << ", size " << size << ", price " << price <<" lei\n";
 }
 
 shoes::~shoes() = default;

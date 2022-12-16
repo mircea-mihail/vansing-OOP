@@ -1,7 +1,3 @@
-//
-// Created by mircea on 12/11/22.
-//
-
 #ifndef VANSING_OOP_OUTLET_H
 #define VANSING_OOP_OUTLET_H
 #include <iostream>

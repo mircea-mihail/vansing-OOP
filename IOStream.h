@@ -5,7 +5,7 @@
 class IOStream {
 protected:
     //cum functioneaza mai exact printul aici?
-    virtual void pall() const = 0;
+    virtual void pall(std::ostream & ) const = 0;
 
     friend std::ostream& operator<< (std::ostream &, const IOStream & );
     friend std::ostream& operator<< (std::ostream &, const IOStream * );
