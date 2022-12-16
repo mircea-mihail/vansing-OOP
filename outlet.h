@@ -22,7 +22,7 @@ public:
 
     static void addVans(const shared_ptr<vans>(&newVans));
     static shared_ptr<vans> getVans(int vansPos);
-    static unsigned long no_items();
+    static unsigned long noItems();
 
     static void printShoes();
     static void printClothes();
@@ -31,8 +31,6 @@ public:
     static void addDefault();
     static void deleteItem(int pos);
     static void deleteAll();
-
-    static void callBrand();
 
     ~outlet();
 };

@@ -13,7 +13,7 @@ using namespace std;
 
 class menu{
 private:
-    static void print_options();
+    static void printOptions();
 
 
 public:

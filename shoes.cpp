@@ -33,6 +33,18 @@ void shoes::setModel(const string &newModel){
     model = newModel;
 }
 
+void shoes::printShoeAsc(){
+    cout << "        ________\n"
+            "     __(_____  <|\n"
+            "    (____ / <| <|\n"
+            "    (___ /  <| L`-------.\n"
+            "    (__ /   L`--------.  \\\n"
+            "    /  `.    ^^^^^ |   \\  |\n"
+            "   |     \\---------'    |/\n"
+            "   |______|____________/]\n"
+            "   [_____|`-.__________]\n";
+}
+
 void shoes::pall()const{
     cout << model << (laces == 1 ? ", with laces" : ", no laces") << ", size " << size << ", price " << price <<" lei\n";
 }

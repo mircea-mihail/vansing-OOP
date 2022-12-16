@@ -15,7 +15,7 @@ void menu::start(){
     shared_ptr<clothes> auxcloth;
     go_loop = true;
     while(go_loop){
-        print_options();
+        printOptions();
         int case_val;
         cin >> case_val;
         try {
@@ -38,17 +38,17 @@ void menu::start(){
                     cin >> auxFloat;
                     auxshoe = make_shared<shoes>(auxInt, auxFloat, auxString, auxBool);
                     outlet::addVans(auxshoe);
-                    outlet::callBrand();
+                    auxshoe->brandPrint();
                     break;
                 case (11):
                     cout << "what shoe to display data for?\n";
                     cin >> auxInt;
-                    if (auxInt >= outlet::no_items())
+                    if (auxInt >= outlet::noItems())
                         throw outOfBounds();
                     if (typeid(shoes) == typeid(*(outlet::getVans(auxInt)))) {
                         auxshoe = dynamic_pointer_cast<shoes>(outlet::getVans(auxInt));
+                        auxshoe->printShoeAsc();
                         cout << auxshoe; // same as auxshoe->pall();
-                        cout << endl << endl << *auxshoe << endl << endl;
                     } else cout << "the item is not a shoe\n";
                     break;
                 case (12):
@@ -72,15 +72,16 @@ void menu::start(){
                     cin >> auxFloat;
                     auxcloth = make_shared<clothes>(auxInt, auxFloat, auxString, auxChar, auxString2);
                     outlet::addVans(auxcloth);
-                    outlet::callBrand();
+                    auxcloth->brandPrint();
                     break;
                 case (21):
                     cout << "what cloth to display data for?\n";
                     cin >> auxInt;
-                    if (auxInt >= outlet::no_items())
+                    if (auxInt >= outlet::noItems())
                         throw outOfBounds();
                     if (typeid(clothes) == typeid(*(outlet::getVans(auxInt)))) {
                         auxcloth = dynamic_pointer_cast<clothes>(outlet::getVans(auxInt));
+                        auxcloth->printClothesAsc();
                         cout << auxcloth; //same as auxcloth->pall();
                     } else cout << "the item is not a clothing item\n";
                     break;
@@ -89,7 +90,7 @@ void menu::start(){
                     break;
 
                 case (3):
-                    cout << "there are " << outlet::no_items() << " items\n";
+                    cout << "there are " << outlet::noItems() << " items\n";
                     break;
                 case (31):
                     outlet::printAll();

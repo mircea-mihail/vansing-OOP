@@ -23,6 +23,8 @@ public:
     bool getLaces()const;
     string getModel()const;
 
+    static void printShoeAsc();
+
     void pall()const override;
 
     ~shoes() override;

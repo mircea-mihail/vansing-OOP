@@ -24,6 +24,7 @@ public:
     string getColor()const;
 
     void pall() const override;
+    static void printClothesAsc();
 
     ~clothes() override;
 };

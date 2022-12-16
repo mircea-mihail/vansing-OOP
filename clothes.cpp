@@ -39,4 +39,13 @@ void clothes::pall()const{
     cout << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 
+void clothes::printClothesAsc() {
+    cout << "   __   __\n"
+            " /|  `-´  |\\\n"
+            "/_|  o.o  |_\\\n"
+            "  | o`o´o |\n"
+            "  |  o^o  |\n"
+            "  |_______|\n";
+}
+
 clothes::~clothes() = default;

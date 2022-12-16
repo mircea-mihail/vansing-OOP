@@ -8,7 +8,7 @@ shared_ptr<vans> outlet::getVans(int vansPos){
     return v[vansPos];
 }
 
-unsigned long outlet::no_items(){
+unsigned long outlet::noItems(){
     return v.size();
 }
 
@@ -54,10 +54,6 @@ void outlet::deleteItem(int pos){
 
 void outlet::deleteAll(){
     v.clear();
-}
-
-void outlet::callBrand() {
-    v[v.size() - 1]->brandPrint();
 }
 
 outlet::~outlet() = default;
