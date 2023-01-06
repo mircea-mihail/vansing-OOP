@@ -1,5 +1,5 @@
-#include "menu.h"
-#include "exceptions.h"
+#include "Menu.h"
+#include "Exceptions.h"
 
 void Menu::printOptions(){
     cout << "\nShoes:   1-add   11-data  12-all\n";

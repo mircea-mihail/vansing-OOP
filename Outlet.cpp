@@ -1,4 +1,4 @@
-#include "outlet.h"
+#include "Outlet.h"
 
 void Outlet::addVans(const shared_ptr<Vans>(&newVans)){
     v.emplace_back(newVans);

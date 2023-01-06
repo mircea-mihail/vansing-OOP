@@ -3,9 +3,9 @@
 #include <iostream>
 #include <memory>
 #include <vector>
-#include "shoes.h"
-#include "clothes.h"
-#include "vans.h"
+#include "Shoes.h"
+#include "Clothes.h"
+#include "Vans.h"
 
 
 using namespace std;

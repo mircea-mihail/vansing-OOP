@@ -55,32 +55,32 @@ build CMakeFiles/vansing_oop.dir/main.cpp.o: CXX_COMPILER__vansing_oop_Debug /ho
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
 
-build CMakeFiles/vansing_oop.dir/vans.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/vans.cpp || cmake_object_order_depends_target_vansing_oop
-  DEP_FILE = CMakeFiles/vansing_oop.dir/vans.cpp.o.d
+build CMakeFiles/vansing_oop.dir/Vans.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/Vans.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/Vans.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++14
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
 
-build CMakeFiles/vansing_oop.dir/shoes.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/shoes.cpp || cmake_object_order_depends_target_vansing_oop
-  DEP_FILE = CMakeFiles/vansing_oop.dir/shoes.cpp.o.d
+build CMakeFiles/vansing_oop.dir/Shoes.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/Shoes.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/Shoes.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++14
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
 
-build CMakeFiles/vansing_oop.dir/clothes.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/clothes.cpp || cmake_object_order_depends_target_vansing_oop
-  DEP_FILE = CMakeFiles/vansing_oop.dir/clothes.cpp.o.d
+build CMakeFiles/vansing_oop.dir/Clothes.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/Clothes.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/Clothes.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++14
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
 
-build CMakeFiles/vansing_oop.dir/menu.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/menu.cpp || cmake_object_order_depends_target_vansing_oop
-  DEP_FILE = CMakeFiles/vansing_oop.dir/menu.cpp.o.d
+build CMakeFiles/vansing_oop.dir/Menu.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/Menu.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/Menu.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++14
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
 
-build CMakeFiles/vansing_oop.dir/outlet.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/outlet.cpp || cmake_object_order_depends_target_vansing_oop
-  DEP_FILE = CMakeFiles/vansing_oop.dir/outlet.cpp.o.d
+build CMakeFiles/vansing_oop.dir/Outlet.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/Outlet.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/Outlet.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++14
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
@@ -91,8 +91,8 @@ build CMakeFiles/vansing_oop.dir/IOStream.cpp.o: CXX_COMPILER__vansing_oop_Debug
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
 
-build CMakeFiles/vansing_oop.dir/exceptions.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/exceptions.cpp || cmake_object_order_depends_target_vansing_oop
-  DEP_FILE = CMakeFiles/vansing_oop.dir/exceptions.cpp.o.d
+build CMakeFiles/vansing_oop.dir/Exceptions.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/Exceptions.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/Exceptions.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++14
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
@@ -105,7 +105,7 @@ build CMakeFiles/vansing_oop.dir/exceptions.cpp.o: CXX_COMPILER__vansing_oop_Deb
 #############################################
 # Link the executable vansing_oop
 
-build vansing_oop: CXX_EXECUTABLE_LINKER__vansing_oop_Debug CMakeFiles/vansing_oop.dir/main.cpp.o CMakeFiles/vansing_oop.dir/vans.cpp.o CMakeFiles/vansing_oop.dir/shoes.cpp.o CMakeFiles/vansing_oop.dir/clothes.cpp.o CMakeFiles/vansing_oop.dir/menu.cpp.o CMakeFiles/vansing_oop.dir/outlet.cpp.o CMakeFiles/vansing_oop.dir/IOStream.cpp.o CMakeFiles/vansing_oop.dir/exceptions.cpp.o
+build vansing_oop: CXX_EXECUTABLE_LINKER__vansing_oop_Debug CMakeFiles/vansing_oop.dir/main.cpp.o CMakeFiles/vansing_oop.dir/Vans.cpp.o CMakeFiles/vansing_oop.dir/Shoes.cpp.o CMakeFiles/vansing_oop.dir/Clothes.cpp.o CMakeFiles/vansing_oop.dir/Menu.cpp.o CMakeFiles/vansing_oop.dir/Outlet.cpp.o CMakeFiles/vansing_oop.dir/IOStream.cpp.o CMakeFiles/vansing_oop.dir/Exceptions.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   POST_BUILD = :

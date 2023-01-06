@@ -3,10 +3,10 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#include "shoes.h"
-#include "clothes.h"
-#include "vans.h"
-#include "outlet.h"
+#include "Shoes.h"
+#include "Clothes.h"
+#include "Vans.h"
+#include "Outlet.h"
 #include "IOStream.h"
 
 using namespace std;

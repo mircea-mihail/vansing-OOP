@@ -8,20 +8,19 @@
 
     metodă clone
 
---    code style
-        classes:    PascalCase
+**    code style
+**        classes:    PascalCase
         methods:    camelCase
         variables:  camelCase
 
     diagrama UML a proiectului
 */
 
-#include "menu.h"
+#include "Menu.h"
 
 using namespace std;
 
 vector<shared_ptr<Vans>> Outlet::v;
-
 
 int main() {
     Menu::start();

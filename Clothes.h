@@ -1,9 +1,7 @@
 #ifndef VANSING_OOP_CLOTHES_H_
 #define VANSING_OOP_CLOTHES_H_
 #include <iostream>
-#include "vans.h"
-#include "vans.h"
-
+#include "Vans.h"
 
 using namespace std;
 
