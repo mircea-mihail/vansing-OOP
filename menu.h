@@ -11,13 +11,13 @@
 
 using namespace std;
 
-class menu{
+class Menu{
 private:
     static void printOptions();
 
 
 public:
-    menu() = delete;
+    Menu() = delete;
     static void start();
 };
 

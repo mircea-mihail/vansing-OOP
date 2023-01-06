@@ -2,15 +2,15 @@
 
 #include <utility>
 
-clothes::clothes(int size_, float price_, string item_, char sex_, string color_):vans(size_, price_){
+Clothes::Clothes(int size_, float price_, string item_, char sex_, string color_):Vans(size_, price_){
     item = std::move(item_);
     sex = sex_;
     color = std::move(color_);
 }
 
-clothes::clothes(const clothes &rhs):vans(rhs.size, rhs.price), item(rhs.item), sex(rhs.sex), color(rhs.color){}
+Clothes::Clothes(const Clothes &rhs):Vans(rhs.size, rhs.price), item(rhs.item), sex(rhs.sex), color(rhs.color){}
 
-clothes& clothes::operator= (const clothes &rhs){
+Clothes& Clothes::operator= (const Clothes &rhs){
     if(this != &rhs){
         item = rhs.item;
         sex = rhs.sex;
@@ -21,25 +21,25 @@ clothes& clothes::operator= (const clothes &rhs){
     return *this;
 }
 
-void clothes::setSex(char newSex){
+void Clothes::setSex(char newSex){
     sex = newSex;
 }
-void clothes::setColor(string newColor){
+void Clothes::setColor(string newColor){
     color = std::move(newColor);
 }
 
-char clothes::getSex()const{
+char Clothes::getSex()const{
     return sex;
 }
-string clothes::getColor()const{
+string Clothes::getColor()const{
     return color;
 }
 
-void clothes::pall(std::ostream &os)const{
+void Clothes::pall(std::ostream &os)const{
     os << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 
-void clothes::printClothesAsc() {
+void Clothes::printClothesAsc() {
     cout << "   __   __\n"
             " /|  `-´  |\\\n"
             "/_|  o.o  |_\\\n"
@@ -48,4 +48,4 @@ void clothes::printClothesAsc() {
             "  |_______|\n";
 }
 
-clothes::~clothes() = default;
+Clothes::~Clothes() = default;

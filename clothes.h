@@ -7,15 +7,15 @@
 
 using namespace std;
 
-class clothes : public vans{
+class Clothes : public Vans{
 private:
     string item;
     char sex;
     string color;
 public:
-    explicit clothes(int size_ = 0, float price_ = 0, string item_ = "",  char sex_ = ' ', string color_ = "");
-    clothes(const clothes &rhs);
-    clothes& operator= (const clothes &rhs);
+    explicit Clothes(int size_ = 0, float price_ = 0, string item_ = "",  char sex_ = ' ', string color_ = "");
+    Clothes(const Clothes &rhs);
+    Clothes& operator= (const Clothes &rhs);
 
     void setSex(char newSex);
     void setColor(string newColor);
@@ -26,7 +26,7 @@ public:
     void pall(std::ostream &) const override;
     static void printClothesAsc();
 
-    ~clothes() override;
+    ~Clothes() override;
 };
 
 #endif

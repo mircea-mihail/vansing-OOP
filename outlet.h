@@ -10,14 +10,14 @@
 
 using namespace std;
 
-class outlet{
+class Outlet{
 private:
-    static vector <shared_ptr<vans>> v;
+    static vector <shared_ptr<Vans>> v;
 public:
-    outlet() = delete;
+    Outlet() = delete;
 
-    static void addVans(const shared_ptr<vans>(&newVans));
-    static shared_ptr<vans> getVans(int vansPos);
+    static void addVans(const shared_ptr<Vans>(&newVans));
+    static shared_ptr<Vans> getVans(int vansPos);
     static unsigned long noItems();
 
     static void printShoes();
@@ -28,7 +28,7 @@ public:
     static void deleteItem(int pos);
     static void deleteAll();
 
-    ~outlet();
+    ~Outlet();
 };
 
 

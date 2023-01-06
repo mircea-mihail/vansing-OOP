@@ -3,15 +3,15 @@
 
 #include <iostream>
 
-class outOfBounds : public std::exception{
+class OutOfBounds : public std::exception{
 public:
-    outOfBounds() = default;
+    OutOfBounds() = default;
     const char* what() const noexcept override;
 };
 
-class tooManyChars : public std::exception{
+class TooManyChars : public std::exception{
 public:
-    tooManyChars() = default;
+    TooManyChars() = default;
     const char * what()const noexcept override;
 };
 

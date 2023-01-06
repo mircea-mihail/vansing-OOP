@@ -2,14 +2,14 @@
 
 using namespace std;
 
-shoes::shoes(int size_, float price_, string model_, bool laces_) : vans(size_, price_){
+Shoes::Shoes(int size_, float price_, string model_, bool laces_) : Vans(size_, price_){
     model = std::move(model_);
     laces = laces_;
 }
 
-shoes::shoes(const shoes &rhs):vans(rhs.size, rhs.price), model(rhs.model), laces(rhs.laces) {}
+Shoes::Shoes(const Shoes &rhs):Vans(rhs.size, rhs.price), model(rhs.model), laces(rhs.laces) {}
 
-shoes& shoes::operator=(const shoes& rhs){
+Shoes& Shoes::operator=(const Shoes& rhs){
     if(this != &rhs) {
         this->model = (rhs).model;
         this->laces = (rhs).laces;
@@ -19,20 +19,20 @@ shoes& shoes::operator=(const shoes& rhs){
         return *this;
 
 }
-bool shoes::getLaces()const{
+bool Shoes::getLaces()const{
     return laces;
 }
-void shoes::setLaces(const bool &newLaces){
+void Shoes::setLaces(const bool &newLaces){
     laces = newLaces;
 }
-string shoes::getModel()const{
+string Shoes::getModel()const{
     return model;
 }
-void shoes::setModel(const string &newModel){
+void Shoes::setModel(const string &newModel){
     model = newModel;
 }
 
-void shoes::printShoeAsc(){
+void Shoes::printShoeAsc(){
     cout << "     ._......     \n"
             "     |X/.*| |     \n"
             "     |X/+ | |     \n"
@@ -41,8 +41,8 @@ void shoes::printShoeAsc(){
             "\\_____/|_/_/\n";
 }
 
-void shoes::pall(std::ostream & os)const{
+void Shoes::pall(std::ostream & os)const{
     os << model << (laces == 1 ? ", with laces" : ", no laces") << ", size " << size << ", price " << price <<" lei\n";
 }
 
-shoes::~shoes() = default;
+Shoes::~Shoes() = default;

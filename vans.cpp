@@ -1,15 +1,15 @@
 #include "vans.h"
 using namespace std;
 
-vans::vans(int size_, float price_){
+Vans::Vans(int size_, float price_){
     size = size_;
     price = price_;
-    //cout << "constructed vans:\nsize " << size << "\nproduct_type " <<product_type << "\n\n";
+    //cout << "constructed Vans:\nsize " << size << "\nproduct_type " <<product_type << "\n\n";
 }
 
-vans::vans(const vans &rhs):vans(rhs.size, rhs.price){};
+Vans::Vans(const Vans &rhs):Vans(rhs.size, rhs.price){};
 
-vans & vans::operator= (const vans& rhs){
+Vans & Vans::operator= (const Vans& rhs){
     if(this != &rhs){
         size = rhs.size;
         price = rhs.price;
@@ -17,22 +17,22 @@ vans & vans::operator= (const vans& rhs){
     return *this;
 }
 
-int vans::getSize() const{
+int Vans::getSize() const{
     return size;
 }
-float vans::getPrice() const{
+float Vans::getPrice() const{
     return price;
 }
 
-void vans::setSize(const int newSize){
+void Vans::setSize(const int newSize){
     size = newSize;
 }
 
-void vans::setPrice(const float newPrice){
+void Vans::setPrice(const float newPrice){
     price = newPrice;
 }
 
-void vans::brandPrint(){
+void Vans::brandPrint(){
     cout << "                         \n"
             "   )       )             \n"
             "  /((   ( /(   (     (   \n"
@@ -43,4 +43,4 @@ void vans::brandPrint(){
             "                         ";
 }
 
-vans::~vans() = default;
+Vans::~Vans() = default;

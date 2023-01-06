@@ -1,5 +1,5 @@
-#ifndef VANSING_OOP_SHOES_H_
-#define VANSING_OOP_SHOES_H_
+#ifndef VANSING_OOP_Shoes_H_
+#define VANSING_OOP_Shoes_H_
 #include <iostream>
 #include <memory>
 #include "vans.h"
@@ -7,15 +7,15 @@
 using namespace std;
 
 
-class shoes : public vans{
+class Shoes : public Vans{
 private:
     string model;
     bool laces;
 
 public:
-    explicit shoes(int size_ = 0, float price_ = 0, string model_ = "", bool laces = false);
-    shoes(const shoes &rhs);
-    shoes& operator=(const shoes& rhs);
+    explicit Shoes(int size_ = 0, float price_ = 0, string model_ = "", bool laces = false);
+    Shoes(const Shoes &rhs);
+    Shoes& operator=(const Shoes& rhs);
 
     void setLaces(const bool &newLaces);
     void setModel(const string &newModel);
@@ -27,7 +27,7 @@ public:
 
     void pall(std::ostream &)const override;
 
-    ~shoes() override;
+    ~Shoes() override;
 };
 
 #endif

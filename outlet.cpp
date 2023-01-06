@@ -1,59 +1,59 @@
 #include "outlet.h"
 
-void outlet::addVans(const shared_ptr<vans>(&newVans)){
+void Outlet::addVans(const shared_ptr<Vans>(&newVans)){
     v.emplace_back(newVans);
 }
 
-shared_ptr<vans> outlet::getVans(int vansPos){
+shared_ptr<Vans> Outlet::getVans(int vansPos){
     return v[vansPos];
 }
 
-unsigned long outlet::noItems(){
+unsigned long Outlet::noItems(){
     return v.size();
 }
 
-void outlet::printShoes(){
+void Outlet::printShoes(){
     for(auto &i: v){
-        if(typeid(shoes) == typeid(*i)) {
+        if(typeid(Shoes) == typeid(*i)) {
             cout << i;
         }
     }
 }
-void outlet::printClothes(){
+void Outlet::printClothes(){
     for(auto &i : v){
-        if(typeid(clothes) == typeid(*i))
+        if(typeid(Clothes) == typeid(*i))
             cout << i;
     }
 }
 
-void outlet::printAll(){
+void Outlet::printAll(){
     for(auto &i: v){
         cout << i;
     }
     cout << '(' << v.size() << " items)" << endl;
 }
 
-void outlet::addDefault(){
-    addVans(make_shared<shoes>(42, 170.5, "slip-ons", 0));
-    addVans(make_shared<shoes>(36, 199.99, "slip-ons", 0));
-    addVans(make_shared<shoes>(39, 300, "old-skool", 1));
-    addVans(make_shared<shoes>(44, 500, "sk8-high", 1));
-    addVans(make_shared<clothes>(40, 200, "T-shirt", 'm', "green"));
-    addVans(make_shared<shoes>(41, 310.5, "sk8-high", 1));
-    addVans(make_shared<clothes>(38, 500,"jeans" , 'f', "black"));
-    addVans(make_shared<shoes>(38, 250, "old-skool", 1));
-    addVans(make_shared<shoes>(42, 240, "vans-era", 1));
-    addVans(make_shared<clothes>(36, 349.99,"hoodie", 'u', "blue"));
-    addVans(make_shared<clothes>(44, 400,"hoodie", 'u', "yellow"));
-    addVans(make_shared<clothes>(42, 50, "socks", 'u', "rainbow"));
+void Outlet::addDefault(){
+    addVans(make_shared<Shoes>(42, 170.5, "slip-ons", 0));
+    addVans(make_shared<Shoes>(36, 199.99, "slip-ons", 0));
+    addVans(make_shared<Shoes>(39, 300, "old-skool", 1));
+    addVans(make_shared<Shoes>(44, 500, "sk8-high", 1));
+    addVans(make_shared<Clothes>(40, 200, "T-shirt", 'm', "green"));
+    addVans(make_shared<Shoes>(41, 310.5, "sk8-high", 1));
+    addVans(make_shared<Clothes>(38, 500,"jeans" , 'f', "black"));
+    addVans(make_shared<Shoes>(38, 250, "old-skool", 1));
+    addVans(make_shared<Shoes>(42, 240, "vans-era", 1));
+    addVans(make_shared<Clothes>(36, 349.99,"hoodie", 'u', "blue"));
+    addVans(make_shared<Clothes>(44, 400,"hoodie", 'u', "yellow"));
+    addVans(make_shared<Clothes>(42, 50, "socks", 'u', "rainbow"));
 }
 
-void outlet::deleteItem(int pos){
+void Outlet::deleteItem(int pos){
     v.erase(v.begin() + pos);
 }
 
-void outlet::deleteAll(){
+void Outlet::deleteAll(){
     v.clear();
 }
 
-outlet::~outlet() = default;
+Outlet::~Outlet() = default;
