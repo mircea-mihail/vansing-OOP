@@ -1,5 +1,6 @@
 #include "Menu.h"
 #include "Exceptions.h"
+#include "OutletFacade.h"
 
 void Menu::printOptions(){
     cout << "\nShoes:   1-add   11-data  12-all\n";
@@ -102,7 +103,7 @@ void Menu::start(){
                     cout << "there are " << Outlet::noItems() << " items\n";
                     break;
                 case (31):
-                    Outlet::printAll();
+                    OutletFacade::print();
                     break;
                 case (32):
                     Outlet::addDefault();

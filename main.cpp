@@ -1,7 +1,7 @@
 /*
 --    2 design patterns
 **        singleton --> the menu
---        decorator --> vans logo print?
+--        facade    --> make a facade to get detailed info of the stock
 
     o clasă șablon (template)
     o metodă șablon                         --> cheapest shoe/cloth (outlet)
@@ -25,6 +25,9 @@ using namespace std;
 
 vector<shared_ptr<Vans>> Outlet::v;
 shared_ptr<Menu> Menu::singleMenu = nullptr;
+
+int Outlet::noShoes = 0;
+int Outlet::noClothes = 0;
 
 int main() {
     shared_ptr<Menu> menu = Menu::getMenuInstance();

@@ -97,6 +97,12 @@ build CMakeFiles/vansing_oop.dir/Exceptions.cpp.o: CXX_COMPILER__vansing_oop_Deb
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
 
+build CMakeFiles/vansing_oop.dir/OutletFacade.cpp.o: CXX_COMPILER__vansing_oop_Debug /home/mircea/Documents/facultate/anul2/semestrul1/poo/proiecte/vansing-oop/OutletFacade.cpp || cmake_object_order_depends_target_vansing_oop
+  DEP_FILE = CMakeFiles/vansing_oop.dir/OutletFacade.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  OBJECT_DIR = CMakeFiles/vansing_oop.dir
+  OBJECT_FILE_DIR = CMakeFiles/vansing_oop.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target vansing_oop
@@ -105,7 +111,7 @@ build CMakeFiles/vansing_oop.dir/Exceptions.cpp.o: CXX_COMPILER__vansing_oop_Deb
 #############################################
 # Link the executable vansing_oop
 
-build vansing_oop: CXX_EXECUTABLE_LINKER__vansing_oop_Debug CMakeFiles/vansing_oop.dir/main.cpp.o CMakeFiles/vansing_oop.dir/Vans.cpp.o CMakeFiles/vansing_oop.dir/Shoes.cpp.o CMakeFiles/vansing_oop.dir/Clothes.cpp.o CMakeFiles/vansing_oop.dir/Menu.cpp.o CMakeFiles/vansing_oop.dir/Outlet.cpp.o CMakeFiles/vansing_oop.dir/IOStream.cpp.o CMakeFiles/vansing_oop.dir/Exceptions.cpp.o
+build vansing_oop: CXX_EXECUTABLE_LINKER__vansing_oop_Debug CMakeFiles/vansing_oop.dir/main.cpp.o CMakeFiles/vansing_oop.dir/Vans.cpp.o CMakeFiles/vansing_oop.dir/Shoes.cpp.o CMakeFiles/vansing_oop.dir/Clothes.cpp.o CMakeFiles/vansing_oop.dir/Menu.cpp.o CMakeFiles/vansing_oop.dir/Outlet.cpp.o CMakeFiles/vansing_oop.dir/IOStream.cpp.o CMakeFiles/vansing_oop.dir/Exceptions.cpp.o CMakeFiles/vansing_oop.dir/OutletFacade.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/vansing_oop.dir
   POST_BUILD = :
