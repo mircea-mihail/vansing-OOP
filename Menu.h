@@ -8,6 +8,7 @@
 #include "Vans.h"
 #include "Outlet.h"
 #include "IOStream.h"
+#include "IdGenerator.h"
 
 using namespace std;
 

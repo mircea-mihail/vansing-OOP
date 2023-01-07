@@ -42,7 +42,7 @@ void Shoes::printShoeAsc(){
 }
 
 void Shoes::pall(std::ostream & os)const{
-    os << model << (laces == 1 ? ", with laces" : ", no laces") << ", size " << size << ", price " << price <<" lei\n";
+    os << id << ": " << model << (laces == 1 ? ", with laces" : ", no laces") << ", size " << size << ", price " << price <<" lei\n";
 }
 
 Shoes::~Shoes() = default;

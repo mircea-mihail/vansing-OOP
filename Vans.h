@@ -2,9 +2,11 @@
 #define VansING_OOP_Vans_H
 #include <iostream>
 #include "IOStream.h"
+#include "IdGenerator.h"
 
 class Vans:public IOStream{
 protected:
+    int id;
     int size;
     float price;
 
@@ -15,9 +17,11 @@ public:
 
     void setSize(int newSize);
     void setPrice(float newPrice);
+    void setId(int newId);
 
     int getSize() const;
     float getPrice() const;
+    int getId() const;
 
     static void brandPrint();
 
@@ -25,4 +29,4 @@ public:
 };
 
 
-#endif //VansING_OOP_Vans_H
+#endif

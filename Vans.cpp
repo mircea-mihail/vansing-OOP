@@ -2,9 +2,9 @@
 using namespace std;
 
 Vans::Vans(int size_, float price_){
+    id = IdGenerator::getId();
     size = size_;
     price = price_;
-    //cout << "constructed Vans:\nsize " << size << "\nproduct_type " <<product_type << "\n\n";
 }
 
 Vans::Vans(const Vans &rhs):Vans(rhs.size, rhs.price){};
@@ -24,6 +24,10 @@ float Vans::getPrice() const{
     return price;
 }
 
+int Vans::getId() const{
+    return id;
+}
+
 void Vans::setSize(const int newSize){
     size = newSize;
 }
@@ -31,6 +35,11 @@ void Vans::setSize(const int newSize){
 void Vans::setPrice(const float newPrice){
     price = newPrice;
 }
+
+void Vans::setId(int newId){
+    id = newId;
+}
+
 
 void Vans::brandPrint(){
     cout << "                         \n"
