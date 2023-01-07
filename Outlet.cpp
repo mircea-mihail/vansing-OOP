@@ -2,6 +2,10 @@
 
 void Outlet::addVans(const shared_ptr<Vans>(&newVans)){
     v.emplace_back(newVans);
+    if(typeid(Clothes) == typeid(*newVans))
+        noClothes ++;
+    if(typeid(Shoes) == typeid(*newVans))
+        noShoes ++;
 }
 
 shared_ptr<Vans> Outlet::getVans(int vansPos){

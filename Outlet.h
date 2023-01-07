@@ -12,16 +12,24 @@ using namespace std;
 
 class Outlet{
 private:
+    static int noShoes, noClothes;
     static vector <shared_ptr<Vans>> v;
 public:
     Outlet() = delete;
 
     static void addVans(const shared_ptr<Vans>(&newVans));
     static shared_ptr<Vans> getVans(int vansPos);
-    static unsigned long noItems();
 
+    static unsigned long noItems();
+    static int getNoShoes(){
+        return noShoes;
+    }
+    static int getNoClothes(){
+        return noClothes;
+    }
     static void printShoes();
     static void printClothes();
+
     static void printAll();
 
     static void addDefault();
