@@ -14,12 +14,12 @@ using namespace std;
 //singleton
 class Menu{
 private:
-    static Menu* singleMenu;
+    static shared_ptr<Menu> singleMenu;
     void printOptions();
     Menu() = default;
 
 public:
-    static Menu* getMenuInstance();
+    static shared_ptr<Menu> getMenuInstance();
     void start();
     ~Menu() = default;
 };

@@ -8,9 +8,11 @@ void Menu::printOptions(){
     cout << "delete:  4-item  41-all   42-end\n\n";
 }
 
-Menu* Menu::getMenuInstance(){
-    if(singleMenu == nullptr)
-        singleMenu = new Menu;
+shared_ptr<Menu> Menu::getMenuInstance(){
+    if(singleMenu == nullptr) {
+        shared_ptr<Menu> auxPtr(new Menu);
+        singleMenu = auxPtr;
+    }
 
     return singleMenu;
 }

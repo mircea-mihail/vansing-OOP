@@ -1,7 +1,7 @@
 /*
-    2 șabloane de proiectare
-**        singleton
-
+--    2 design patterns
+**        singleton --> the menu
+--        decorator --> vans logo print?
 
     o clasă șablon (template)
     o metodă șablon                         --> cheapest shoe/cloth (outlet)
@@ -24,10 +24,10 @@
 using namespace std;
 
 vector<shared_ptr<Vans>> Outlet::v;
-Menu * Menu::singleMenu = nullptr;
+shared_ptr<Menu> Menu::singleMenu = nullptr;
 
 int main() {
-    Menu *menu = Menu::getMenuInstance();
+    shared_ptr<Menu> menu = Menu::getMenuInstance();
     menu->start();
     return 0;
 }
