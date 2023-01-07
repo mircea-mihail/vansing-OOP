@@ -11,14 +11,17 @@
 
 using namespace std;
 
+//singleton
 class Menu{
 private:
-    static void printOptions();
-
+    static Menu* singleMenu;
+    void printOptions();
+    Menu() = default;
 
 public:
-    Menu() = delete;
-    static void start();
+    static Menu* getMenuInstance();
+    void start();
+    ~Menu() = default;
 };
 
 #endif

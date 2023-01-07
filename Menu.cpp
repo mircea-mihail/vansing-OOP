@@ -8,6 +8,13 @@ void Menu::printOptions(){
     cout << "delete:  4-item  41-all   42-end\n\n";
 }
 
+Menu* Menu::getMenuInstance(){
+    if(singleMenu == nullptr)
+        singleMenu = new Menu;
+
+    return singleMenu;
+}
+
 void Menu::start(){
     bool go_loop; char auxChar; string auxString2;
     string auxString; bool auxBool; int auxInt; float auxFloat;

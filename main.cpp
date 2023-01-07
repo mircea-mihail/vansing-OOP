@@ -1,17 +1,20 @@
 /*
     2 șabloane de proiectare
-        o clasă șablon (template)
+**        singleton
 
-    o metodă șablon
-        o metodă / clasă template specializată
-        o clasă pentru generat IDuri pentru obiecte
+
+    o clasă șablon (template)
+    o metodă șablon                         --> cheapest shoe/cloth (outlet)
+    o metodă / clasă template specializată
+
+    o clasă pentru generat IDuri pentru obiecte
 
     metodă clone
 
 **    code style
 **        classes:    PascalCase
-        methods:    camelCase
-        variables:  camelCase
+**        methods:    camelCase
+**        variables:  camelCase
 
     diagrama UML a proiectului
 */
@@ -21,8 +24,10 @@
 using namespace std;
 
 vector<shared_ptr<Vans>> Outlet::v;
+Menu * Menu::singleMenu = nullptr;
 
 int main() {
-    Menu::start();
+    Menu *menu = Menu::getMenuInstance();
+    menu->start();
     return 0;
 }
