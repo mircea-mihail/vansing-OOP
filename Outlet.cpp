@@ -16,6 +16,13 @@ unsigned long Outlet::noItems(){
     return v.size();
 }
 
+int Outlet::getNoShoes(){
+    return noShoes;
+}
+int Outlet::getNoClothes(){
+    return noClothes;
+}
+
 void Outlet::printShoes(){
     for(auto &i: v){
         if(typeid(Shoes) == typeid(*i)) {

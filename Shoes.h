@@ -27,6 +27,11 @@ public:
 
     void pall(std::ostream &)const override;
 
+    std::shared_ptr<Vans> clone() const override{
+        std::shared_ptr<Shoes>aux = make_shared<Shoes>(this->size, this->price, this->model, this->laces);
+        return aux;
+    }
+
     ~Shoes() override;
 };
 

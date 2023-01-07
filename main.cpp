@@ -7,9 +7,9 @@
     template method                         --> cheapest shoe/cloth (outlet)
     o metodă / clasă template specializată
 
-    o clasă pentru generat IDuri pentru obiecte
+**    object id generator class
 
-    metodă clone
+**    metodă clone
 
 **    code style
 **        classes:    PascalCase

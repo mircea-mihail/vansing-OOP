@@ -1,6 +1,7 @@
 #ifndef VansING_OOP_Vans_H
 #define VansING_OOP_Vans_H
 #include <iostream>
+#include <memory>
 #include "IOStream.h"
 #include "IdGenerator.h"
 
@@ -22,6 +23,8 @@ public:
     int getSize() const;
     float getPrice() const;
     int getId() const;
+
+    virtual std::shared_ptr<Vans> clone() const = 0;
 
     static void brandPrint();
 

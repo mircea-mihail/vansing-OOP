@@ -20,13 +20,10 @@ public:
     static void addVans(const shared_ptr<Vans>(&newVans));
     static shared_ptr<Vans> getVans(int vansPos);
 
+    //facade functions
     static unsigned long noItems();
-    static int getNoShoes(){
-        return noShoes;
-    }
-    static int getNoClothes(){
-        return noClothes;
-    }
+    static int getNoShoes();
+    static int getNoClothes();
     static void printShoes();
     static void printClothes();
 
@@ -35,6 +32,10 @@ public:
     static void addDefault();
     static void deleteItem(int pos);
     static void deleteAll();
+
+    static void cloneVans(int i){
+        addVans(v[i]->clone());
+    }
 
     ~Outlet();
 };

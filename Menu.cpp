@@ -3,10 +3,11 @@
 #include "OutletFacade.h"
 
 void Menu::printOptions(){
-    cout << "\nShoes:   1-add   11-data  12-all\n";
-    cout << "Clothes: 2-add   21-data  22-all\n";
-    cout << "all:     3-els   31-all   32-add def\n";
-    cout << "delete:  4-item  41-all   42-end\n\n";
+    cout << "\nShoes:   1-add    11-data  12-all\n";
+    cout << "Clothes: 2-add    21-data  22-all\n";
+    cout << "all:     3-els    31-all   32-add def\n";
+    cout << "misc:    4-facade 41-clone     \n";
+    cout << "delete:  5-item   51-all   52-end\n\n";
 }
 
 shared_ptr<Menu> Menu::getMenuInstance(){
@@ -103,25 +104,36 @@ void Menu::start(){
                     cout << "there are " << Outlet::noItems() << " items\n";
                     break;
                 case (31):
-                    OutletFacade::print();
+                    Outlet::printAll();
                     break;
                 case (32):
                     Outlet::addDefault();
                     break;
-                case (4):
+
+                case(4):
+                    OutletFacade::print();
+                    break;
+                case(41):
+                    cout << "what item to clone\n";
+                    cin >> auxInt;
+                    if(auxInt < 0 || auxInt >= Outlet::noItems())
+                        throw(OutOfBounds());
+                    Outlet::cloneVans(auxInt);
+                    break;
+                case (5):
                     cout << "what item to delete\n";
                     cin >> auxInt;
                     if(auxInt < 0 || auxInt >= Outlet::noItems())
                         throw(OutOfBounds());
                     Outlet::deleteItem(auxInt);
                     break;
-                case (41):
+                case (51):
                     cout << "are you sure you want to delete everything? (y/n)\n";
                     cin >> auxChar;
                     if (auxChar == 'y' || auxChar == 'Y')
                         Outlet::deleteAll();
                     break;
-                case (42):
+                case (52):
                     go_loop = false;
                     break;
                 default:
