@@ -36,7 +36,7 @@ string Clothes::getColor()const{
 }
 
 void Clothes::pall(std::ostream &os)const{
-    os << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
+    os << id << ": " << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 
 void Clothes::printClothesAsc() {
