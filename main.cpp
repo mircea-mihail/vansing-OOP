@@ -1,10 +1,10 @@
 /*
---    2 design patterns
+**    2 design patterns
 **        singleton --> the menu
---        facade    --> make a facade to get detailed info of the stock
+**        facade    --> make a facade to get detailed info of the stock
 
-    o clasă șablon (template)
-    o metodă șablon                         --> cheapest shoe/cloth (outlet)
+    template class
+    template method                         --> cheapest shoe/cloth (outlet)
     o metodă / clasă template specializată
 
     o clasă pentru generat IDuri pentru obiecte
@@ -26,6 +26,7 @@ using namespace std;
 vector<shared_ptr<Vans>> Outlet::v;
 shared_ptr<Menu> Menu::singleMenu = nullptr;
 
+int IdGenerator::id = 0;
 int Outlet::noShoes = 0;
 int Outlet::noClothes = 0;
 
