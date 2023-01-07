@@ -5,12 +5,12 @@
 #include "OutletFacade.h"
 
 void OutletFacade::print(){
-    cout << "    shoes available:\n";
+    cout << "        shoes available:\n";
     Outlet::printShoes();
-    cout << Outlet::getNoShoes() << " shoes\n\n";
-    cout << "    clothes available:\n";
+    cout << "        " << Outlet::getNoShoes() << " shoes\n\n";
+    cout << "        clothes available:\n";
     Outlet::printClothes();
-    cout << Outlet::getNoClothes() << " clothes\n\n";
+    cout << "        " << Outlet::getNoClothes() << " clothes\n\n";
     cout << "in total, there are " << Outlet::noItems() << " items\n";
 
 }
