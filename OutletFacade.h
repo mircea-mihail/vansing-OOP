@@ -6,15 +6,14 @@
 using namespace std;
 
 //limited functionality facade directed towards the customer
-//who is only able to purchase not to make changes to the stock
+//who is only able to check the available items for purchase
+//not to make changes to the stock
 
 class OutletFacade {
 
 public:
     OutletFacade() = default;
-
     static void print();
-
     ~OutletFacade() = default;
 };
 
