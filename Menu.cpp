@@ -3,6 +3,7 @@
 #include "OutletFacade.h"
 
 void Menu::printOptions(){
+    cout << "\nprint track " << IdGenerator<float>::getId();
     cout << "\nShoes:   1-add    11-data  12-all\n";
     cout << "Clothes: 2-add    21-data  22-all\n";
     cout << "all:     3-els    31-all   32-add def\n";
@@ -109,7 +110,6 @@ void Menu::start(){
                 case (32):
                     Outlet::addDefault();
                     break;
-
                 case(4):
                     OutletFacade::print();
                     break;

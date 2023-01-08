@@ -1,12 +1,24 @@
 #ifndef VANSING_OOP_IDGENERATOR_H
 #define VANSING_OOP_IDGENERATOR_H
 
-class IdGenerator{
+template <typename T>class IdGenerator{
 private:
-    static int id;
+    static T id;
 public:
-    static int getId();
+    static T getId(){
+        id = id + 1;
+        return id;
+    }
 };
 
+template <> class IdGenerator<float>{
+private:
+    static float id;
+public:
+    static float getId(){
+        id += 0.1;
+        return id;
+    }
+};
 
 #endif

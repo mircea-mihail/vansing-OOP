@@ -3,8 +3,8 @@
 **        singleton --> the menu
 **        facade    --> make a facade to get detailed info of the stock
 
-    template class
-    template method                         --> cheapest shoe/cloth (outlet)
+**    template class
+**    template method
     o metodă / clasă template specializată
 
 **    object id generator class
@@ -19,13 +19,16 @@
 */
 
 #include "Menu.h"
+#include "IdGenerator.h"
+
 
 using namespace std;
-
 vector<shared_ptr<Vans>> Outlet::v;
 shared_ptr<Menu> Menu::singleMenu = nullptr;
 
-int IdGenerator::id = 0;
+template<> int IdGenerator<int>::id = 0;
+float IdGenerator<float>::id = 0;
+
 int Outlet::noShoes = 0;
 int Outlet::noClothes = 0;
 

@@ -2,7 +2,7 @@
 using namespace std;
 
 Vans::Vans(int size_, float price_){
-    id = IdGenerator::getId();
+    id = IdGenerator<int>::getId();
     size = size_;
     price = price_;
 }
