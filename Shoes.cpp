@@ -45,4 +45,9 @@ void Shoes::pall(std::ostream & os)const{
     os << id << ": " << model << (laces == 1 ? ", with laces" : ", no laces") << ", size " << size << ", price " << price <<" lei\n";
 }
 
+std::shared_ptr<Vans> Shoes::clone() const{
+    std::shared_ptr<Shoes>aux = make_shared<Shoes>(this->size, this->price, this->model, this->laces);
+    return aux;
+}
+
 Shoes::~Shoes() = default;

@@ -48,4 +48,9 @@ void Clothes::printClothesAsc() {
             "  |_______|\n";
 }
 
+std::shared_ptr<Vans> Clothes::clone() const{
+    shared_ptr<Clothes> aux = make_shared<Clothes>(this->size, this->price, this->item, this->sex, this->color);
+    return aux;
+}
+
 Clothes::~Clothes() = default;

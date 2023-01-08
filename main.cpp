@@ -8,7 +8,6 @@
     o metodă / clasă template specializată
 
 **    object id generator class
-
 **    metodă clone
 
 **    code style
