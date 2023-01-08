@@ -23,7 +23,7 @@ public:
     bool getLaces()const;
     string getModel()const;
 
-    static void printShoeAsc();
+    static void printShoeAscii();
 
     void pall(std::ostream &)const override;
 

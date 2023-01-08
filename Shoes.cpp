@@ -32,7 +32,7 @@ void Shoes::setModel(const string &newModel){
     model = newModel;
 }
 
-void Shoes::printShoeAsc(){
+void Shoes::printShoeAscii(){
     cout << "     ._......     \n"
             "     |X/.*| |     \n"
             "     |X/+ | |     \n"

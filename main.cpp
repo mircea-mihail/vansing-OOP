@@ -5,7 +5,7 @@
 
 **    template class
 **    template method
-    o metodă / clasă template specializată
+**    specialised class/method
 
 **    object id generator class
 **    metodă clone
@@ -20,7 +20,6 @@
 
 #include "Menu.h"
 #include "IdGenerator.h"
-
 
 using namespace std;
 vector<shared_ptr<Vans>> Outlet::v;

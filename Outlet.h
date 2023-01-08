@@ -33,9 +33,7 @@ public:
     static void deleteItem(int pos);
     static void deleteAll();
 
-    static void cloneVans(int i){
-        addVans(v[i]->clone());
-    }
+    static void cloneVans(int i);
 
     ~Outlet();
 };

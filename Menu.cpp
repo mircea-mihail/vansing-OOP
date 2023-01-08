@@ -59,7 +59,7 @@ void Menu::start(){
                         throw OutOfBounds();
                     if (typeid(Shoes) == typeid(*(Outlet::getVans(auxInt)))) {
                         auxshoe = dynamic_pointer_cast<Shoes>(Outlet::getVans(auxInt));
-                        auxshoe->printShoeAsc();
+                        auxshoe->printShoeAscii();
                         cout << auxshoe; // same as auxshoe->pall();
                     } else cout << "the item is not a shoe\n";
                     break;
@@ -93,7 +93,7 @@ void Menu::start(){
                         throw OutOfBounds();
                     if (typeid(Clothes) == typeid(*(Outlet::getVans(auxInt)))) {
                         auxcloth = dynamic_pointer_cast<Clothes>(Outlet::getVans(auxInt));
-                        auxcloth->printClothesAsc();
+                        auxcloth->printClothesAscii();
                         cout << auxcloth; //same as auxcloth->pall();
                     } else cout << "the item is not a clothing item\n";
                     break;

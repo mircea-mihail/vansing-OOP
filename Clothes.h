@@ -22,7 +22,7 @@ public:
     string getColor()const;
 
     void pall(std::ostream &) const override;
-    static void printClothesAsc();
+    static void printClothesAscii();
 
     std::shared_ptr<Vans> clone() const override;
 

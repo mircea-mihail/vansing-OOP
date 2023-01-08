@@ -67,4 +67,8 @@ void Outlet::deleteAll(){
     v.clear();
 }
 
+void Outlet::cloneVans(int i){
+    addVans(v[i]->clone());
+}
+
 Outlet::~Outlet() = default;

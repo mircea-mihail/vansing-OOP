@@ -39,7 +39,7 @@ void Clothes::pall(std::ostream &os)const{
     os << id << ": " << item << ", sex " << sex << ", color " << color << ", size " << size << ", price " << price << " lei\n";
 }
 
-void Clothes::printClothesAsc() {
+void Clothes::printClothesAscii() {
     cout << "   __   __\n"
             " /|  `-´  |\\\n"
             "/_|  o.o  |_\\\n"
