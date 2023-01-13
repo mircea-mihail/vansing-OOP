@@ -25,7 +25,7 @@ using namespace std;
 vector<shared_ptr<Vans>> Outlet::v;
 shared_ptr<Menu> Menu::singleMenu = nullptr;
 
-template<> int IdGenerator<int>::id = 0;
+template<> int IdGenerator<int>::id = -1;
 float IdGenerator<float>::id = 0;
 
 int Outlet::noShoes = 0;
